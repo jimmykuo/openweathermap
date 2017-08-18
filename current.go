@@ -37,6 +37,7 @@ type CurrentWeatherData struct {
 	ID      int                `json:"id"`
 	Name    string             `json:"name"`
 	Cod     int                `json:"cod"`
+	Message string             `json:"message"`
 	Unit    string
 	Lang    string
 	Key     string
