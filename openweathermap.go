@@ -16,7 +16,7 @@ package openweathermap
 
 import (
 	"errors"
-	"log"
+	"fmt"
 	"net/http"
 	"os"
 )
@@ -138,7 +138,7 @@ func getKey() string {
 	key := os.Getenv("OWM_API_KEY")
 
 	if !ValidAPIKey(key) {
-		log.Fatalln(errInvalidKey)
+		fmt.Println(errInvalidKey.Error())
 	}
 
 	return key
